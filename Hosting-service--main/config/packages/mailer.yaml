@@ -1,0 +1,9 @@
+framework:
+    mailer:
+        dsn: '%env(MAILER_DSN)%'
+
+web_profiler:
+    toolbar: true
+
+
+

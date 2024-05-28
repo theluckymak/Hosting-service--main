@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  database:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgers
+      - POSTGRES_PASSWORD=123456
+
+  mailer:
+    image: schickling/mailcatcher
+    ports:
+      - "1025:1025"
+      - "1080:1080"

@@ -1,0 +1,15 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+
+
+when@test:
+    twig:
+        strict_variables: true
+        form_themes: ['bootstrap_5_layout.html.twig']
+
+        # config/packages/twig.yaml
+        twig:
+            default_path: '%kernel.project_dir%/templates'
+            globals:
+                user: '@=app.user'
+                error: '@=app.session.flashbag.get("error")'

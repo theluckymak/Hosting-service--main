@@ -1,0 +1,27 @@
+
+
+<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">New Contact Us</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+{% if successMessage is not null %}
+<div class="alert alert-success" role="alert">
+  {{ successMessage }}
+</div>
+
+{% else %}
+      {{ form_start(form) }}
+      {{ form(form) }}
+{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src = "{{ asset('js/contact-form.js') }}"></script>
+
